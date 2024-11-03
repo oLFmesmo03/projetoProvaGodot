@@ -1,17 +1,18 @@
 extends Node2D
 
 @onready var menu_map = preload("res://Maps/scenes/menuMap.tscn").instantiate()  # Carrega e instancia o menuMap
+@onready var mapa1 = preload("res://Maps/layouts/floorTileSet.tscn").instantiate()  # Carrega e instancia o menuMap
 @onready var prince = preload("res://Characters/scenes/princeScene.tscn").instantiate()  # Carrega e instancia o príncipe
 
 func _ready() -> void:
 	# Adiciona o menuMap à cena principal
-	add_child(menu_map)
+	add_child(mapa1)
 
 	# Adiciona o príncipe à cena principal
 	add_child(prince)
 
 	# Ajusta z_index para garantir que o príncipe esteja na frente do menuMap
-	menu_map.z_index = 1  # menuMap é desenhado atrás do príncipe
+	mapa1.z_index = 1  # menuMap é desenhado atrás do príncipe
 	prince.z_index = 2    # príncipe é desenhado na frente
 
 	# Posiciona o príncipe na cena (opcional)

@@ -252,6 +252,7 @@ parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="princeSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
+rotation = 0.00111185
 texture = ExtResource("4_2ldwr")
 hframes = 9
 region_enabled = true
