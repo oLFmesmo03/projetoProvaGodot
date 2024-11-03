@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlq6hcntjt5vw"
-path="res://.godot/imported/atlas_floor-16x16.png-47b75c53c519d72aefa0a46ed24862f0.ctex"
+uid="uid://d1rgmhv58vbj6"
+path="res://.godot/imported/wall_low1.png-190a9dc7cc19e879a9bd62444b05de3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/textures/tilesets/atlas_floor-16x16.png"
-dest_files=["res://.godot/imported/atlas_floor-16x16.png-47b75c53c519d72aefa0a46ed24862f0.ctex"]
+source_file="res://Resources/textures/tilesets/wall_low1.png"
+dest_files=["res://.godot/imported/wall_low1.png-190a9dc7cc19e879a9bd62444b05de3e.ctex"]
 
 [params]
 

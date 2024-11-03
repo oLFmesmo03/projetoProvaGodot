@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4pd0x73oksqs"
-path="res://.godot/imported/atlas_walls_high-16x32.png-b2be66ca889741a80e5138de8a85bfe1.ctex"
+uid="uid://dwjfd4xidxqch"
+path="res://.godot/imported/wall_high1.png-015e7f443665326fc87edaf759a2d47c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/textures/tilesets/atlas_walls_high-16x32.png"
-dest_files=["res://.godot/imported/atlas_walls_high-16x32.png-b2be66ca889741a80e5138de8a85bfe1.ctex"]
+source_file="res://Resources/textures/tilesets/wall_high1.png"
+dest_files=["res://.godot/imported/wall_high1.png-015e7f443665326fc87edaf759a2d47c.ctex"]
 
 [params]
 

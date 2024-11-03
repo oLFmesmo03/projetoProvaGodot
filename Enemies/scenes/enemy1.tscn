@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://v7qgyib6f486"]
+
+[ext_resource type="Texture2D" uid="uid://vgfes4xuwh7s" path="res://Resources/textures/assets/characters_and_enemies_Basic.png" id="1_7ebw7"]
+
+[node name="Enemy1" type="CharacterBody2D"]
+
+[node name="CharactersAndEnemiesBasic" type="Sprite2D" parent="."]
+position = Vector2(3, -12)
+texture = ExtResource("1_7ebw7")
+region_enabled = true
+region_rect = Rect2(368, 368, 128, 24)
