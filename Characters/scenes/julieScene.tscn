@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct36ys24rod21"]
+
+[ext_resource type="Script" path="res://Characters/scripts/character.gd" id="1_mytmi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kwcd"]
+size = Vector2(12, 6)
+
+[node name="Julie" type="CharacterBody2D"]
+script = ExtResource("1_mytmi")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_6kwcd")
