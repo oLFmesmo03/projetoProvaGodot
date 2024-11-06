@@ -1,23 +1,31 @@
 extends Node2D
 
-@onready var menu_map = preload("res://Maps/scenes/menuMap.tscn").instantiate()  # Carrega e instancia o menuMap
-@onready var mapa1 = preload("res://Maps/layouts/floorTileSet.tscn").instantiate()  # Carrega e instancia o menuMap
+@onready var menu_start_map = preload("res://Maps/scenes/menuStartMap.tscn").instantiate()  # Carrega e instancia o menuStartMap
 @onready var prince = preload("res://Characters/scenes/princeScene.tscn").instantiate()  # Carrega e instancia o príncipe
+@onready var enemy1 = preload("res://Enemies/scenes/enemy1.tscn").instantiate()  # Carrega e instancia o inimigo
 
 func _ready() -> void:
 	# Adiciona o menuMap à cena principal
-	add_child(mapa1)
+	add_child(menu_start_map)
 
 	# Adiciona o príncipe à cena principal
 	add_child(prince)
 
-	# Ajusta z_index para garantir que o príncipe esteja na frente do menuMap
-	mapa1.z_index = 1  # menuMap é desenhado atrás do príncipe
-	prince.z_index = 2    # príncipe é desenhado na frente
+	# Adiciona o inimigo à cena principal
+	add_child(enemy1)
 
-	# Posiciona o príncipe na cena (opcional)
+	# Ajusta z_index para garantir que o príncipe e o inimigo estejam visíveis
+	menu_start_map.z_index = 1  # menuMap é desenhado atrás do príncipe e do inimigo
+	prince.z_index = 2    # príncipe é desenhado na frente do menuMap
+	enemy1.z_index = 3    # inimigo é desenhado à frente do príncipe
+
+	# Posiciona o príncipe e o inimigo na cena
 	prince.position = Vector2(100, 100)  # Ajuste a posição conforme necessário
+	enemy1.position = Vector2(300, 100)  # Ajuste a posição conforme necessário
 
-func _process(delta: float) -> void:
-	# Adicione qualquer lógica de atualização contínua aqui, se necessário
-	pass
+	# Passa a referência do príncipe para o inimigo
+	enemy1.set("player", prince)  # Definindo uma variável no inimigo para o jogador
+
+	# Imprima a posição para verificar se tudo está correto
+	print("Príncipe posicionado em: ", prince.position)
+	print("Inimigo posicionado em: ", enemy1.position)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://ddxnyot2hsq7o"]
+[gd_scene load_steps=26 format=3 uid="uid://ddxnyot2hsq7o"]
 
 [ext_resource type="Script" path="res://Characters/scripts/character.gd" id="1_dmsp3"]
+[ext_resource type="PackedScene" uid="uid://cj1fowpcr4ouu" path="res://Components/scenes/Health_Component.tscn" id="3_2i1sh"]
 [ext_resource type="Texture2D" uid="uid://vgfes4xuwh7s" path="res://Resources/textures/assets/characters_and_enemies_Basic.png" id="4_2ldwr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mql3"]
-size = Vector2(12, 6)
+size = Vector2(12, 12)
 
 [sub_resource type="Animation" id="Animation_jnp7l"]
 length = 0.001
@@ -236,7 +237,7 @@ script = ExtResource("1_dmsp3")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2(0, -3)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_2mql3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -264,3 +265,5 @@ offset_top = -41.0
 offset_right = 39.0
 offset_bottom = -18.0
 max_lines_visible = 1
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_2i1sh")]
